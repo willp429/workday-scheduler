@@ -1,4 +1,4 @@
-//Get local storage
+//Get local app storage
 var checkHistory = function () {
     $( "#text-entry1" ).val( localStorage.getItem( "text-entry1" ) );
     $( "#text-entry2" ).val( localStorage.getItem( "text-entry2" ) );
@@ -30,12 +30,12 @@ var wDay = {
     '5 PM': ''
 };
 
-//----DISPLAY THE CURRENT DAY AT THE TOP OF THE CALENDAR----//
+/*DISPLAY THE CURRENT DAY AT THE TOP OF THE CALENDAR*/
 $( '#currentDay' ).text(
     cTime.format( 'dddd' ) + ', ' + cTime.format( 'MMM Do YYYY' )
-); /* could add " ,hh:ss:mm a" */
+);
 
-//----COLOR CODE THE TIME OF DAY (PAST, PRESENT, FUTURE)----//
+/*COLOR CODE THE TIME OF DAY (PAST, PRESENT, FUTURE)*/
 for ( var property in wDay ) {
     var tEntry = '#text-entry' + eCounter;
     var hour = cTime.hour();
@@ -50,10 +50,7 @@ for ( var property in wDay ) {
     eCounter++;
 }
 
-/* store text box entered data after button is saved; display the data
-(2) trim value 
-(3) write to local storage */
-
+/* STORE TEXT ENTRY WHEN SAVE BUTTON IS SELECTED*/
 $( 'button' ).click( function createTasks() {
     var timeTask = $( this ).siblings( 'textarea' ).val();
     var timeSlot = $( this ).siblings( 'textarea' ).attr( 'id' );
