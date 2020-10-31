@@ -24,4 +24,4 @@ MDN web docs, Stackoverflow
 * Add ability to store and view previous workday tasks
 
 ## Screenshot
-(/assests/readme.jpg?raw=true)
+![workday-scheduler](/assests/readme.jpg)
